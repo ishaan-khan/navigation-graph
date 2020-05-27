@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Navigation Sample</string>
+    <string name="simple_nav">Simple Navigation</string>
+    <string name="simple_nav_msg">This is a simple Navigation</string>
+    <string name="main_fragment">Main Fragment</string>
+    <string name="args_nav">Navigation with arguments</string>
+    <string name="args_hint">argument to be passed..</string>
+    <string name="enter_args_msg">Please enter some message to be passed as an argment in the area above</string>
+    <string name="animated_nav">Animated Navigation</string>
+    <string name="deep_link_nav">Deep link Navigation</string>
+    <string name="popup_nav">Popup Navigation</string>
+    <string name="popup_fragment_one">To check popup functionality press the below button</string>
+    <string name="next_fragment">Go to next Fragment</string>
+    <string name="popup_fragment_msg">Press the below button to popup back (removes all previously fragments from stack) to the Main Fragment.</string>
+    <string name="popup_fragment">Popup to Main Fragment</string>
+</resources>

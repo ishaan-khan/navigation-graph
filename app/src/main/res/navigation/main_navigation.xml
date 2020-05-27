@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/main_fragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.ishaan.navigationsample.view.fragments.MainFragment"
+        android:label="@string/main_fragment"
+        tools:layout="@layout/main_fragment">
+
+        <action
+            android:id="@+id/action_main_fragment_to_simple_nav_fragment"
+            app:destination="@id/simple_nav_fragment" />
+
+        <action
+            android:id="@+id/action_main_fragment_to_args_nav_fragment"
+            app:destination="@id/args_nav_fragment" />
+
+        <action
+            android:id="@+id/action_main_fragment_to_animated_nav_fragment"
+            app:destination="@id/animated_nav_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+
+        <deepLink app:uri="https://bit.ly"
+            app:action="android.intent.action.VIEW" />
+
+        <action
+            android:id="@+id/action_main_fragment_to_popup_nav_fragment"
+            app:destination="@id/popup_nav_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/simple_nav_fragment"
+        android:name="com.ishaan.navigationsample.view.fragments.NavigatedFragment"
+        android:label="@string/simple_nav"
+        tools:layout="@layout/navigated_fragment"/>
+
+    <fragment
+        android:id="@+id/args_nav_fragment"
+        android:name="com.ishaan.navigationsample.view.fragments.NavigatedFragment"
+        android:label="@string/args_nav"
+        tools:layout="@layout/navigated_fragment">
+
+        <argument
+            android:name="data"
+            android:defaultValue=""
+            app:argType="string"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/animated_nav_fragment"
+        android:name="com.ishaan.navigationsample.view.fragments.NavigatedFragment"
+        android:label="@string/animated_nav"
+        tools:layout="@layout/navigated_fragment"/>
+
+    <fragment
+        android:id="@+id/popup_nav_fragment"
+        android:name="com.ishaan.navigationsample.view.fragments.PopupFragmentOne"
+        android:label="@string/popup_nav"
+        tools:layout="@layout/popup_fragment_one">
+
+        <action
+            android:id="@+id/action_popup_nav_fragment_to_popup_nav_fragment2"
+            app:destination="@id/popup_nav_fragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/popup_nav_fragment2"
+        android:name="com.ishaan.navigationsample.view.fragments.PopupFragmentTwo"
+        android:label="@string/popup_nav"
+        tools:layout="@layout/popup_fragment_two">
+
+        <action
+            android:id="@+id/action_popup_nav_fragment2_to_main_fragment"
+            app:destination="@id/main_fragment"
+            app:popUpTo="@id/main_fragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
