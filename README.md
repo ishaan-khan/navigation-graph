@@ -10,3 +10,6 @@ Current version includes only fragment navigations:
 5. Popup navigation of fragment
 
 Stay tuned for other updates!
+
+Play store link: 
+https://play.google.com/store/apps/details?id=com.ishaan.navigationsample
