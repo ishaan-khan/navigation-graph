@@ -20,6 +20,10 @@
 
             <nav-graph android:value="@navigation/main_navigation"/>
         </activity>
+
+        <activity android:name=".view.activity.SecondaryActivity"/>
+
+        <activity android:name=".view.activity.ActivityWithTransitionAnimation"/>
     </application>
 
 </manifest>

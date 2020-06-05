@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/main_fragment"
         android:name="com.ishaan.navigationsample.view.fragments.MainFragment"
-        android:label="@string/main_fragment"
+        android:label="@string/app_name"
         tools:layout="@layout/main_fragment">
 
         <action
@@ -27,9 +27,6 @@
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right"/>
 
-        <deepLink app:uri="https://bit.ly"
-            app:action="android.intent.action.VIEW" />
-
         <action
             android:id="@+id/action_main_fragment_to_popup_nav_fragment"
             app:destination="@id/popup_nav_fragment" />
@@ -46,6 +43,8 @@
         android:name="com.ishaan.navigationsample.view.fragments.NavigatedFragment"
         android:label="@string/args_nav"
         tools:layout="@layout/navigated_fragment">
+
+        <deepLink app:uri="www.example.com/username/{userid}" />
 
         <argument
             android:name="data"
@@ -82,4 +81,21 @@
             app:popUpTo="@id/main_fragment"
             app:popUpToInclusive="true"/>
     </fragment>
+
+    <action
+        android:id="@+id/action_main_activity_to_secondary_activity"
+        app:destination="@id/nav_to_secondary_activity"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"/>
+
+    <activity
+        android:id="@+id/nav_to_secondary_activity"
+        android:name="com.ishaan.navigationsample.view.activity.SecondaryActivity">
+        <argument
+            android:name="withPopup"
+            android:defaultValue="true"
+            app:argType="boolean"/>
+    </activity>
+
+    <include app:graph="@navigation/secondary_navigation"/>
 </navigation>

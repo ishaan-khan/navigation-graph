@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item android:title="@string/fragments">
+        <menu>
+            <item android:id="@id/simple_nav_fragment"
+                android:title="@string/simple_nav"/>
+
+            <item android:id="@id/animated_nav_fragment"
+                android:title="@string/animated_nav" />
+
+            <item android:id="@id/popup_nav_fragment"
+                android:title="@string/popup_nav"/>
+        </menu>
+    </item>
 </menu>

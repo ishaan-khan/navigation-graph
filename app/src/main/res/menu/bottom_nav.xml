@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/secondary_fragment"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/search_nav"/>
 
+    <item
+        android:id="@id/share_fragment"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/share_nav"/>
+
+    <item
+        android:id="@id/schedule_fragment"
+        android:icon="@android:drawable/ic_menu_week"
+        android:title="@string/schedule_nav"/>
 </menu>

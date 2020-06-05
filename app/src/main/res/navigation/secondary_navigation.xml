@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/secondary_navigation.xml">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/secondary_navigation"
+    app:startDestination="@id/secondary_fragment">
 
+    <fragment
+        android:id="@+id/secondary_fragment"
+        android:name="com.ishaan.navigationsample.view.fragments.SearchFragment"
+        android:label="@string/search_nav"
+        tools:layout="@layout/search_fragment">
+        <action
+            android:id="@+id/nav_to_transition_activity"
+            app:destination="@id/transition_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/share_fragment"
+        android:name="com.ishaan.navigationsample.view.fragments.ShareFragment"
+        android:label="@string/share_nav"
+        tools:layout="@layout/share_fragment"/>
+
+    <fragment
+        android:id="@+id/schedule_fragment"
+        android:name="com.ishaan.navigationsample.view.fragments.SchedulesFragment"
+        android:label="@string/schedule_nav"
+        tools:layout="@layout/schedules_fragment"/>
+
+    <activity
+        android:id="@+id/transition_activity"
+        android:name="com.ishaan.navigationsample.view.activity.ActivityWithTransitionAnimation"
+        tools:layout="@layout/transition_activity"/>
 </navigation>

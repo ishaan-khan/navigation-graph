@@ -15,5 +15,8 @@ infix fun Context?.toastMsg(msg: Int) {
 
 class Utility {
 
+    companion object {
+        const val DEEP_LINK_NOTIFICATION_ID = 101
+    }
 
 }

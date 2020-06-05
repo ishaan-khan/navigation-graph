@@ -13,4 +13,17 @@
     <string name="next_fragment">Go to next Fragment</string>
     <string name="popup_fragment_msg">Press the below button to popup back (removes all previously fragments from stack) to the Main Fragment.</string>
     <string name="popup_fragment">Popup to Main Fragment</string>
+    <string name="nav_header_title">Ishaankhan Pathan</string>
+    <string name="fragments">Fragments</string>
+    <string name="search_nav">Search</string>
+    <string name="share_nav">Share</string>
+    <string name="schedule_nav">Schedules</string>
+    <string name="search_nav_msg">This is the search Fragment.</string>
+    <string name="schedules_nav_msg">This is the schedules Fragment</string>
+    <string name="share_nav_msg">This is the Sharing Fragment</string>
+    <string name="activity_nav">Activity Navigation</string>
+    <string name="transition_msg">Transition Animation</string>
+    <string name="transition_btn_msg">Click for Transition Animation</string>
+    <string name="img_transition">image_transition</string>
+    <string name="txt_transition">Text Transition</string>
 </resources>
