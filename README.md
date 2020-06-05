@@ -1,15 +1,26 @@
 # Navigation Graph in Android
-This is a sample app written completely in Kotlin which showcases the navigation graph library included in the Android Jetpack.
+This is a sample app written in Kotlin which showcases example use cases of the Navigation Component included in the Android Jetpack.
 
-Current version includes only fragment navigations:
+Key Components:
 
-1. Simple navigation
-2. Passing arguments with navigation
-3. Animated fragment transitions
-4. Deep linking navigation using pending intents
+1. Simple navigation (Fragment to Fragment/Activity)
+
+2. Passing arguments with navigation(Fragment to Fragment/Activity)
+
+3. Animated fragment transitions(Animated Fragment/Activity Transitions)
+
+4. Deep linking using navigation(Explicit and implicit)
+
 5. Popup navigation of fragment
 
-Stay tuned for other updates!
+6. Drawer, NavigationView, BottomNavigationView and menus integrated with Navigation graphs
+
+7. Nested navigation graphs
+
+8. SharedElement Transition using Navigation graphs
+
+
+Github link: https://github.com/ishaan-khan/navigation-graph
 
 Play store link: 
 https://play.google.com/store/apps/details?id=com.ishaan.navigationsample
