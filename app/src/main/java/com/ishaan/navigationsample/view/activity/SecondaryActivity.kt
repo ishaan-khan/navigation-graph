@@ -40,8 +40,24 @@ class SecondaryActivity: AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if(item?.itemId == android.R.id.home)
-            findNavController(R.id.secondary_nav_fragment).navigateUp()
+        if(item?.itemId == android.R.id.home) {
+            finishWithAnimation()
+        }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onBackPressed() {
+        val navController = findNavController(R.id.secondary_nav_fragment)
+        val current = navController.currentDestination
+        if(current != null && current == navController.graph.get(R.id.secondary_fragment)) {
+            finishWithAnimation()
+        }
+        else
+            super.onBackPressed()
+    }
+
+    private fun finishWithAnimation() {
+        finish()
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
     }
 }
