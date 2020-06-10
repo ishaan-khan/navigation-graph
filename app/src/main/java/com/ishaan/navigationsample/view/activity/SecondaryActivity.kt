@@ -49,7 +49,7 @@ class SecondaryActivity: AppCompatActivity() {
     override fun onBackPressed() {
         val navController = findNavController(R.id.secondary_nav_fragment)
         val current = navController.currentDestination
-        if(current != null && current == navController.graph.get(R.id.secondary_fragment)) {
+        if(current != null && current == navController.graph[R.id.secondary_fragment]) {
             finishWithAnimation()
         }
         else
